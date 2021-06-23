@@ -13,25 +13,25 @@
   在站点配置文件`_config.yml`或者主题配置文件`_config.butterfly.yml`中添加
 
   ```yaml
-    # hexo-butterfly-swiper
-    # see https://akilar.top/posts/1f9c68c9/
-    swiper:
-      enable: true # 开关
-      priority: 5 #过滤器优先权
-      enable_page: / # 应用页面
-      layout: # 挂载容器类型
-        type: id
-        name: recent-posts
-        index: 0
-      user: Akilarlxh #github用户名
-      api: 'https://python-github-calendar-api.vercel.app/api'
-      pc_minheight: 280px #桌面端最小高度
-      mobile_minheight: 0px #移动端最小高度
-      color: "['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06']" #橘黄色调
-      # color: "['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f']" #浅紫色调
-      # color: "['#ebedf0', '#f0fff4', '#dcffe4', '#bef5cb', '#85e89d', '#34d058', '#28a745', '#22863a', '#176f2c', '#165c26', '#144620']" #翠绿色调
-      # color: "['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c']" #天青色调
-      container: #父元素容器，需要使用pug语法
+  # hexo-filter-gitcalendar
+  # see https://akilar.top/posts/1f9c68c9/
+  gitcalendar:
+    enable: true # 开关
+    priority: 5 #过滤器优先权
+    enable_page: / # 应用页面
+    layout: # 挂载容器类型
+      type: id
+      name: recent-posts
+      index: 0
+    user: Akilarlxh #github用户名
+    api: 'https://python-github-calendar-api.vercel.app/api'
+    pc_minheight: 280px #桌面端最小高度
+    mobile_minheight: 0px #移动端最小高度
+    color: "['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06']" #橘黄色调
+    # color: "['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f']" #浅紫色调
+    # color: "['#ebedf0', '#f0fff4', '#dcffe4', '#bef5cb', '#85e89d', '#34d058', '#28a745', '#22863a', '#176f2c', '#165c26', '#144620']" #翠绿色调
+    # color: "['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c']" #天青色调
+    container: #父元素容器，需要使用pug语法
   ```
 3. 参数释义
 
