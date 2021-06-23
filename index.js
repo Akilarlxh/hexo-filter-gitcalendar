@@ -37,7 +37,7 @@ hexo.extend.filter.register('after_generate', function () {
     //样式资源
   const css_text = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.css">`
     //脚本资源
-  const js_text = `<script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.js"></script>`
+  const js_text = `<script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@0.0.3/lib/gitcalendar.js"></script>`
 
   //注入容器声明
   var get_layout
@@ -66,14 +66,18 @@ hexo.extend.filter.register('after_generate', function () {
                           parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
                           }
                         if( ${get_layout} && (location.pathname ==='${data.enable_page}'|| '${data.enable_page}' ==='all')){
+                        GithubCalendar("${data.api}?${data.user}",${data.color},'${data.user}')
                         ${pluginname}_injector_config()
                         }
+
                       </script>`
+  // 注入样式资源
+  hexo.extend.injector.register('head_end', css_text, "default");
+  // 注入脚本资源
+  hexo.extend.injector.register('body_end', js_text, "default");
   // 注入用户脚本
   // 此处利用挂载容器实现了二级注入
   hexo.extend.injector.register('body_end', user_info_js, "default");
-  // 注入样式资源
-  hexo.extend.injector.register('body_end', js_text, "default");
-  // 注入脚本资源
-  hexo.extend.injector.register('head_end', css_text, "default");
+
+
 },priority)
