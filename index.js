@@ -35,7 +35,7 @@ hexo.extend.filter.register('after_generate', function () {
 
   //cdn资源声明
     //样式资源
-  const css_text = `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitcalendar/4.1.6/css/gitcalendar.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-gitcalendar@0.0.4/lib/gitcalendarstyle.css">`
+  const css_text = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.css">`
     //脚本资源
   const js_text = `<script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.js"></script>`
 
