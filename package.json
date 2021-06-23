@@ -1,0 +1,40 @@
+{
+  "name": "hexo-filter-gitcalendar",
+  "version": "0.0.1",
+  "description": "A github commit calendar plugin for hexo",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint ."
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "lib/",
+    "index.js"
+  ],
+  "contributors": [
+    "Ice Kano",
+    "Lete乐特"
+  ],
+  "keywords": [
+    "hexo",
+    "renderer",
+    "git",
+    "calendar",
+    "butterfly",
+    "volantis",
+    "matery",
+    "mengd",
+    "plugins"
+  ],
+  "author": "akilarlxh",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "pug": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Akilarlxh/hexo-filter-gitcalendar.git"
+  }
+}

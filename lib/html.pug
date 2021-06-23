@@ -1,0 +1,15 @@
+case theme
+  when 'butterfly'
+    .recent-post-item(style='width:100%;height:auto;padding:10px;')
+  when 'volantis'
+    .post.post-v3.white-box.reveal.shadow(style='width:100%;height:auto;padding:10px;')
+  when 'matery'
+    .container
+      .card(style='width:100%;height:auto;padding:10px;')
+  when 'mengd'
+    div(style='width:auto;height:auto;margin:10px 30px;')
+  default
+    temple_html
+    
+  include gitcalendar.pug  
+    
