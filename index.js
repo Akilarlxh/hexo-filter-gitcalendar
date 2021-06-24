@@ -37,7 +37,7 @@ hexo.extend.filter.register('after_generate', function () {
     //样式资源
   const css_text = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.css">`
     //脚本资源
-  const js_text = `<script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar@0.0.3/lib/gitcalendar.js"></script>`
+  const js_text = `<script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.js"></script>`
 
   //注入容器声明
   var get_layout
