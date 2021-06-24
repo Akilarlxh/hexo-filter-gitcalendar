@@ -24,8 +24,8 @@ hexo.extend.filter.register('after_generate', function () {
       layout_type: config.layout.type,
       layout_name: config.layout.name,
       layout_index: config.layout.index ? config.layout.index : 0,
-      pc_minheight: config.pc_minheight ? config.pc_minheight : "280px",
-      mobile_minheight: config.mobile_minheight ? config.mobile_minheight : "0px",
+      pc_minheight: config.minheight.pc ? config.minheight.pc : "280px",
+      mobile_minheight: config.minheight.mobile ? config.minheight.mobile : "0px",
       color: config.color ? config.color : "['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06']",
       apiurl: config.apiurl ? config.apiurl + "/api" : 'https://gitcalendar.akilar.top/api',
       container: config.container
