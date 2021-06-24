@@ -51,4 +51,4 @@
   |color|list|【可选】一个包含11个色值的数组，文档给出了四款预设值|
   |container|pug|【可选】预留的父元素容器，用以适配多主题，需要用pug语法填写，目前已适配butterfly，volantis，matery，mengd主题，这四个主题，插件会自自动识别_config.yml内填写的theme配置项。其余主题需要自己填写父元素容器。|
 # 截图
-  ![](https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/assets/gitcalendar.png)
+  ![](https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.png)
