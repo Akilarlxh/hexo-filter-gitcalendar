@@ -7,10 +7,6 @@ const path = require('path')
 const urlFor = require('hexo-util').url_for.bind(hexo)
 const util = require('hexo-util')
 
-// 过滤器优先级，priority 值越低，过滤器会越早执行，默认priority是10。
-const pre_priority = hexo.config.gitcalendar.priority ? hexo.config.gitcalendar.priority : hexo.theme.config.gitcalendar.priority
-const priority = pre_priority ? pre_priority : 10
-
 hexo.extend.filter.register('after_generate', function () {
   // 首先获取整体的配置项名称
   const config = hexo.config.gitcalendar ? hexo.config.gitcalendar : hexo.theme.config.gitcalendar
@@ -78,4 +74,11 @@ hexo.extend.filter.register('after_generate', function () {
   // 此处利用挂载容器实现了二级注入
   hexo.extend.injector.register('body_end', user_info_js, "default");
 
-},priority)
+},
+hexo.extend.helper.register('priority', function(){
+  // 过滤器优先级，priority 值越低，过滤器会越早执行，默认priority是10
+  const pre_priority = hexo.config.electric_clock.priority ?  hexo.config.electric_clock.priority : hexo.theme.config.electric_clock.priority
+  const priority = pre_priority ? pre_priority : 10
+  return priority
+})
+)

@@ -2,6 +2,9 @@
 
 给`hexo`添加 [首页git提交日历](https://akilar.top/posts/1f9c68c9/)
 
+# 致谢
+感谢[@冰老师](https://zfe.space/)的gitcalendar思路。本插件基于冰老师的hexo-githubcalendar进行二次开发。优化了对主题的适应性。添加了各个冗长配置项的默认项。尽可能简化了配置过程。
+
 # 安装
 
 1. 安装插件,在博客根目录`[Blogroot]`下打开终端，运行以下指令：
@@ -10,7 +13,7 @@
   ```
 
 2. 添加配置信息，以下为写法示例
-  在站点配置文件`_config.yml`或者主题配置文件`_config.butterfly.yml`中添加
+  在站点配置文件`_config.yml`或者主题配置文件如`_config.butterfly.yml`中添加
 
   ```yaml
   # hexo-filter-gitcalendar
