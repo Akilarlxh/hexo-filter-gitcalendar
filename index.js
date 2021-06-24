@@ -8,12 +8,12 @@ const urlFor = require('hexo-util').url_for.bind(hexo)
 const util = require('hexo-util')
 
 // 过滤器优先级，priority 值越低，过滤器会越早执行，默认priority是10。
-const pre_priority = hexo.config.gitcalendar.priority || hexo.theme.config.gitcalendar.priority
+const pre_priority = hexo.config.gitcalendar.priority ? hexo.config.gitcalendar.priority : hexo.theme.config.gitcalendar.priority
 const priority = pre_priority ? pre_priority : 10
 
 hexo.extend.filter.register('after_generate', function () {
   // 首先获取整体的配置项名称
-  const config = hexo.config.gitcalendar || hexo.theme.config.gitcalendar
+  const config = hexo.config.gitcalendar ? hexo.config.gitcalendar : hexo.theme.config.gitcalendar
   // 如果配置开启
   if (!(config && config.enable)) return
   // 集体声明配置项
