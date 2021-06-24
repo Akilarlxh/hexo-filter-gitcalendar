@@ -1,7 +1,7 @@
 {
   "name": "hexo-filter-gitcalendar",
-  "version": "0.0.3",
-  "description": "A github commit calendar plugin for hexo",
+  "version": "0.0.4",
+  "description": "A git commit calendar plugin for hexo",
   "main": "index.js",
   "scripts": {
     "eslint": "eslint ."
@@ -35,6 +35,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Akilarlxh/hexo-filter-gitcalendar.git"
+    "url": "https://git.com/Akilarlxh/hexo-filter-gitcalendar.git"
   }
 }

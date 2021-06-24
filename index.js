@@ -27,7 +27,7 @@ hexo.extend.filter.register('after_generate', function () {
       pc_minheight: config.pc_minheight ? config.pc_minheight : "280px",
       mobile_minheight: config.mobile_minheight ? config.mobile_minheight : "0px",
       color: config.color ? config.color : "['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06']",
-      api: config.api ? config.api : 'https://python-github-calendar-api.vercel.app/api',
+      apiurl: config.apiurl ? config.apiurl + "/api" : 'https://gitcalendar.akilar.top/api',
       container: config.container
     }
   // 渲染页面
@@ -61,15 +61,14 @@ hexo.extend.filter.register('after_generate', function () {
                         function ${pluginname}_injector_config(){
                           var parent_div_git = ${get_layout};
                           var item_html = '${temple_html_text}';
+                          parent_div_git.insertAdjacentHTML("afterbegin",item_html)
                           console.log('已挂载${pluginname}')
-                          // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
-                          parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
                           }
-                        if( ${get_layout} && (location.pathname ==='${data.enable_page}'|| '${data.enable_page}' ==='all')){
-                        GithubCalendar("${data.api}?${data.user}",${data.color},'${data.user}')
-                        ${pluginname}_injector_config()
-                        }
 
+                        if( ${get_layout} && (location.pathname ==='${data.enable_page}'|| '${data.enable_page}' ==='all')){
+                            ${pluginname}_injector_config()
+                            GitCalendarInit("${data.apiurl}?${data.user}",${data.color},'${data.user}')
+                        }
                       </script>`
   // 注入样式资源
   hexo.extend.injector.register('head_end', css_text, "default");
@@ -78,6 +77,5 @@ hexo.extend.filter.register('after_generate', function () {
   // 注入用户脚本
   // 此处利用挂载容器实现了二级注入
   hexo.extend.injector.register('body_end', user_info_js, "default");
-
 
 },priority)
