@@ -22,10 +22,26 @@
     enable: true # 开关
     priority: 5 #过滤器优先权
     enable_page: / # 应用页面
+    # butterfly挂载容器
     layout: # 挂载容器类型
       type: id
       name: recent-posts
       index: 0
+    # volantis挂载容器
+    # layout:
+    #   type: class
+    #   name: l_main
+    #   index: 0
+    # matery挂载容器
+    # layout:
+    #   type: id
+    #   name: indexCard
+    #   index: 0
+    # mengd挂载容器
+    # layout:
+    #   type: class
+    #   name: content
+    #   index: 0
     user: Akilarlxh #git用户名
     apiurl: 'https://gitcalendar.akilar.top'
     minheight:
