@@ -1,6 +1,6 @@
 {
   "name": "hexo-filter-gitcalendar",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A git commit calendar plugin for hexo",
   "main": "index.js",
   "scripts": {

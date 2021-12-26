@@ -52,6 +52,8 @@
     # color: "['#ebedf0', '#f0fff4', '#dcffe4', '#bef5cb', '#85e89d', '#34d058', '#28a745', '#22863a', '#176f2c', '#165c26', '#144620']" #翠绿色调
     # color: "['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c']" #天青色调
     container: .recent-post-item(style='width:100%;height:auto;padding:10px;') #父元素容器，需要使用pug语法
+    gitcalendar_css: https://unpkg.zhimg.com/hexo-filter-gitcalendar/lib/gitcalendar.css
+    gitcalendar_js: https://unpkg.zhimg.com/hexo-filter-gitcalendar/lib/gitcalendar.js
   ```
 3. 参数释义
 
@@ -69,5 +71,7 @@
   |minheight.mobile|0px|【可选】移动端最小高度，默认为0px|
   |color|list|【可选】一个包含11个色值的数组，文档给出了四款预设值|
   |container|pug|【可选】预留的父元素容器，用以适配多主题，需要用pug语法填写，目前已适配butterfly，volantis，matery，mengd主题，这四个主题，插件会自自动识别_config.yml内填写的theme配置项。其余主题需要自己填写父元素容器。|
+  |gitcalendar_css|URL|【可选】自定义CSS样式链接|
+  |gitcalendar_js|URL|【可选】自定义js链接|
 # 截图
-  ![](https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.png)
+  ![](https://unpkg.zhimg.com/hexo-filter-gitcalendar/lib/gitcalendar.png)
