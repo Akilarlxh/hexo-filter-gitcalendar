@@ -24,6 +24,7 @@ hexo.extend.filter.register('after_generate', function () {
       mobile_minheight: config.minheight.mobile ? config.minheight.mobile : "0px",
       color: config.color ? config.color : "['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06']",
       apiurl: config.apiurl ? config.apiurl + "/api" : 'https://gitcalendar.akilar.top/api',
+      jsonurl: config.jsonurl ? config.jsonurl : config.apiurl + "/api?" + config.user,
       container: config.container,
       gitcalendar_css: config.gitcalendar_css ? urlFor(config.gitcalendar_css) : "https://unpkg.zhimg.com/hexo-filter-gitcalendar/lib/gitcalendar.css",
       gitcalendar_js: config.gitcalendar_js ? urlFor(config.gitcalendar_js) : "https://unpkg.zhimg.com/hexo-filter-gitcalendar/lib/gitcalendar.js"
@@ -65,7 +66,7 @@ hexo.extend.filter.register('after_generate', function () {
 
     if( ${get_layout} && (location.pathname ==='${data.enable_page}'|| '${data.enable_page}' ==='all')){
         ${pluginname}_injector_config()
-        GitCalendarInit("${data.apiurl}?${data.user}",${data.color},'${data.user}')
+        GitCalendarInit("${data.jsonurl}",${data.color},'${data.user}')
     }
   </script>`
   // 注入样式资源

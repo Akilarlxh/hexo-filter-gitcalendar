@@ -44,6 +44,7 @@
     #   index: 0
     user: Akilarlxh #git用户名
     apiurl: 'https://gitcalendar.akilar.top'
+    jsonurl: #开发者专用
     minheight:
       pc: 280px #桌面端最小高度
       mibile: 0px #移动端最小高度
@@ -67,6 +68,7 @@
   |layout.index|0和正整数|【可选】前提是layout.type为class，因为同一页面可能有多个class，此项用来确认究竟排在第几个顺位|
   |user|text|【必选】git用户名|
   |apiurl|url|【可选】默认使用提供文档提供的api，但还是建议自建api，参考教程：[自建API部署](https://akilar.top/posts/1f9c68c9/#自建API部署)|
+  |jsonurl|url|开发者专用，即上述api返回的json文件，仅做测试用|
   |minheight.pc|280px|【可选】桌面端最小高度，默认为280px|
   |minheight.mobile|0px|【可选】移动端最小高度，默认为0px|
   |color|list|【可选】一个包含11个色值的数组，文档给出了四款预设值|
