@@ -1,6 +1,6 @@
 case theme
   when 'butterfly'
-    .recent-post-item(style='width:100%;height:auto;padding:10px;')
+    .recent-post-item#gitcalendarBar(style='width:100%;height:auto;padding:10px;')
       include gitcalendar.pug 
   when 'volantis'
     .post.post-v3.white-box.reveal.shadow(style='width:100%;height:auto;padding:10px;')
@@ -14,6 +14,5 @@ case theme
       include gitcalendar.pug 
   default
     container
-      include gitcalendar.pug 
- 
+      include gitcalendar.pug
     
